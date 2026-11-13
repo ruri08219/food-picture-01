@@ -10,6 +10,8 @@ path, so every run writes exactly the same bytes.
 import os
 import shutil
 
+# The output is a byte-for-byte copy of the repository's image, so the
+# program is deterministic: two runs write identical bytes.
 HERE = os.path.dirname(os.path.abspath(__file__))
 SOURCE = os.path.join(HERE, "entry.jpg")
 DEST = "/output/entry.png"
